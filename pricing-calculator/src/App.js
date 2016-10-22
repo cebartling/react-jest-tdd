@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import "./App.css";
+import {Grid, Row, Col, Panel, PageHeader} from "react-bootstrap";
+import PricingCalculatorView from "./components/calculator/PricingCalculatorView";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <PageHeader>
+                    Pricing Calculator
+                </PageHeader>
+                <Grid>
+                    <Row className="">
+                        <Col xs={12} md={8}>
+                            <Panel>
+                                Main content
+                            </Panel>
+                        </Col>
+                        <Col xs={6} md={4}>
+                            <PricingCalculatorView></PricingCalculatorView>
+                        </Col>
+                    </Row>
+                </Grid>
+            </div>
+        );
+    }
 }
 
 export default App;

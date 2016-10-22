@@ -1,0 +1,21 @@
+.pricing-calculator__your-estimate {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.pricing-calculator__line-item-name {
+    font-size: 0.9em;
+    color: #8d92b5;
+}
+
+.pricing-calculator__line-item-price {
+    font-size: 0.9em;
+    color: #8d92b5;
+    text-align: right;
+}
+
+.pricing-calculator__total-price {
+    font-size: 1.4em;
+    color: #110ab5;
+    text-align: right;
+}
