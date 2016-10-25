@@ -3,6 +3,7 @@ import {Panel, Row, Col} from "react-bootstrap";
 import "./NoSqlSystemFormView.css";
 
 class NoSqlSystemFormView extends Component {
+
     render() {
         return (
             <Panel>
