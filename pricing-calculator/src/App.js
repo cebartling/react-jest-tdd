@@ -1,30 +1,26 @@
 import React, {Component} from "react";
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import "./App.css";
-import {Grid, Row, Col, Panel, PageHeader} from "react-bootstrap";
-import PricingCalculatorView from "./components/calculator/PricingCalculatorView";
+import AppLayout from "./components/AppLayout";
+import OptionsSelectionView from "./components/options/OptionsSelectionView";
+import AppServerFormView from "./components/options/app_server/AppServerFormView";
+import DatabaseServerFormView from "./components/options/database_server/DatabaseServerFormView";
+import NoSqlSystemFormView from "./components/options/nosql_system/NoSqlSystemFormView";
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <PageHeader>
-                    Pricing Calculator
-                </PageHeader>
-                <Grid>
-                    <Row className="">
-                        <Col xs={12} md={8}>
-                            <Panel>
-                                Main content
-                            </Panel>
-                        </Col>
-                        <Col xs={6} md={4}>
-                            <PricingCalculatorView></PricingCalculatorView>
-                        </Col>
-                    </Row>
-                </Grid>
-            </div>
+            <Router history={browserHistory}>
+                <Route path="/" component={AppLayout}>
+                    <IndexRoute component={OptionsSelectionView}></IndexRoute>
+                    <Route path="appServers" component={AppServerFormView}></Route>
+                    <Route path="databaseServers" component={DatabaseServerFormView}></Route>
+                    <Route path="noSqlServers" component={NoSqlSystemFormView}></Route>
+                </Route>
+            </Router>
         );
     }
 }
 
 export default App;
+

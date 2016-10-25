@@ -8,7 +8,7 @@ class NoSqlSystemFormView extends Component {
             <Panel>
                 <Row>
                     <Col md={12} className="">
-                        App Server options
+                        NoSQL Server options
                     </Col>
                 </Row>
             </Panel>
